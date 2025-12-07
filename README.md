@@ -27,11 +27,11 @@ The script will produce CSV files containing only the filtered Reddit data.
 
 ---
 
-## 2) `normalizing.py` — Cleaning and Standardizing the Filtered Data
+### 2) `normalizing.py` — Cleaning and Standardizing the Filtered Data
 
 This script processes all filtered CSVs and outputs a single clean dataset.
 
-### What it does:
+#### What it does:
 - Converts timestamps into a unified `date` column  
 - Extracts titles and reconstructs proper Reddit URLs  
 - Identifies subreddit names from permalinks  
@@ -42,7 +42,7 @@ This script processes all filtered CSVs and outputs a single clean dataset.
 - Sorts all rows by date  
 - Saves the final dataset to a CSV file  
 
-### Before running, you must edit:
+#### Before running, you must edit:
 - `submissions_folder` — path to your folder with filtered submission CSVs  
 - `comments_folder` — path to your folder with filtered comment CSVs  
 - `output_file` — name and path for the final dataset output  
@@ -51,14 +51,14 @@ This will produce a fully normalized dataset such as **normalizedFINALdata.csv**
 
 ---
 
-## 3) `eda.ipynb` — Exploratory Data Analysis
+### 3) `eda.ipynb` — Exploratory Data Analysis
 
 After filtering and normalizing data, you will obtain a dataset such as `dataset.csv`
 containing only the subreddits and time ranges you selected earlier.
 
 `eda.ipynb` performs the full exploratory data analysis.
 
-### To run:
+#### To run:
 1. Open the notebook in **Jupyter Notebook**, **JupyterLab**, or **VS Code**.  
 2. Update the dataset path at the top of the notebook to the location of your CSV.  
 3. Follow the instructions and comments inside the notebook step-by-step.
@@ -67,20 +67,20 @@ This notebook generates visualisations and statistical insights into conspiracy 
 
 ---
 
-## 4) `csv/` Folder — Additional Resources
+### 4) `csv/` Folder — Additional Resources
 
 The `csv/` folder contains supplementary CSV files used for easier visualization in the EDA notebook.  
 They include preprocessed tables, external dataset links, or helper files used during analysis.
 
 ---
 
-## Initial Dataset 
+### Initial Dataset 
 
 **[https://drive.google.com/file/d/1MGeq5bn4uhuSF6srA1FR5bcLGr6smbYF/view?usp=sharing]**
 
 ---
 
-## File and Folder Structure
+### File and Folder Structure
 
 ```
 conspiracy-css-project/
