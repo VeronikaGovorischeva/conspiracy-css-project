@@ -51,7 +51,23 @@ This will produce a fully normalized dataset such as **normalizedFINALdata.csv**
 
 ---
 
-### 3) `eda.ipynb` — Exploratory Data Analysis
+### 3) `sentiment.py` — Sentiment & Emotion Analysis with NRC Lexicon
+
+After obtaining your cleaned and normalized dataset as `dataset.csv`,  
+you can run `sentiment.py` to generate lexical emotion scores for every text entry.
+
+This script applies the **NRCLex** emotion lexicon to the combined text of titles and bodies,  
+and produces a new file called `sentiment.csv`, which is later used in the EDA notebook.
+
+#### To run:
+Make sure your normalized dataset is saved as **`dataset.csv`** in the project folder (or update the script path).  
+
+This script generates visualisable emotional metadata, including eight NRC emotion categories and text length,  
+saving the full result into **`sentiment.csv`**.
+
+---
+
+### 4) `eda.ipynb` — Exploratory Data Analysis
 
 After filtering and normalizing data, you will obtain a dataset such as `dataset.csv`
 containing only the subreddits and time ranges you selected earlier.
@@ -67,7 +83,7 @@ This notebook generates visualisations and statistical insights into conspiracy 
 
 ---
 
-### 4) `csv/` Folder — Additional Resources
+### 5) `csv/` Folder — Additional Resources
 
 The `csv/` folder contains supplementary CSV files used for easier visualization in the EDA notebook.  
 They include preprocessed tables, external dataset links, or helper files used during analysis.
@@ -87,6 +103,7 @@ conspiracy-css-project/
 │
 ├── filter_file.py            # Filters raw Reddit .zst archives into CSV subsets
 ├── normalizing.py            # Cleans & standardizes filtered CSV files
+├── sentiment.py               # Performs NRC-based sentiment & emotion analysis → sentiment.csv
 ├── eda.ipynb                 # Final exploratory analysis notebook
 │
 ├── csv/                      # Additional datasets used for visualizations
